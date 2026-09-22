@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://lpderc8bamrw"]
+
+[ext_resource type="Script" uid="uid://dh767vdmnla1b" path="res://rsc/scripts/main_script.gd" id="1_ahpuo"]
+[ext_resource type="PackedScene" uid="uid://bqbgog6cwr1yd" path="res://rsc/nodes/board_space.tscn" id="1_oifup"]
+[ext_resource type="PackedScene" uid="uid://cyo4rbixprw0q" path="res://rsc/nodes/dice.tscn" id="2_ahpuo"]
+[ext_resource type="PackedScene" uid="uid://b6b4uc71nlht5" path="res://rsc/nodes/player.tscn" id="4_on526"]
+
+[node name="Root" type="Node2D" unique_id=84001233]
+script = ExtResource("1_ahpuo")
+
+[node name="Board" type="Node2D" parent="." unique_id=297616316]
+
+[node name="BoardSpace" parent="Board" unique_id=1127422891 instance=ExtResource("1_oifup")]
+position = Vector2(-487, -273)
+
+[node name="BoardSpace2" parent="Board" unique_id=1180916475 instance=ExtResource("1_oifup")]
+position = Vector2(-356, -273)
+
+[node name="BoardSpace3" parent="Board" unique_id=185146691 instance=ExtResource("1_oifup")]
+position = Vector2(-223, -273)
+
+[node name="BoardSpace4" parent="Board" unique_id=1233252411 instance=ExtResource("1_oifup")]
+position = Vector2(-90, -273)
+
+[node name="BoardSpace5" parent="Board" unique_id=941899072 instance=ExtResource("1_oifup")]
+position = Vector2(48, -273)
+
+[node name="BoardSpace6" parent="Board" unique_id=1274936710 instance=ExtResource("1_oifup")]
+position = Vector2(183, -273)
+
+[node name="BoardSpace7" parent="Board" unique_id=163356842 instance=ExtResource("1_oifup")]
+position = Vector2(322, -273)
+
+[node name="BoardSpace8" parent="Board" unique_id=976931646 instance=ExtResource("1_oifup")]
+position = Vector2(458, -273)
+
+[node name="BoardSpace9" parent="Board" unique_id=48969771 instance=ExtResource("1_oifup")]
+position = Vector2(458, -175)
+
+[node name="BoardSpace10" parent="Board" unique_id=740637464 instance=ExtResource("1_oifup")]
+position = Vector2(322, -175)
+
+[node name="BoardSpace11" parent="Board" unique_id=413681986 instance=ExtResource("1_oifup")]
+position = Vector2(183, -175)
+
+[node name="BoardSpace12" parent="Board" unique_id=1903621610 instance=ExtResource("1_oifup")]
+position = Vector2(54, -175)
+
+[node name="BoardSpace13" parent="Board" unique_id=1728387870 instance=ExtResource("1_oifup")]
+position = Vector2(-90, -175)
+
+[node name="BoardSpace14" parent="Board" unique_id=1149641705 instance=ExtResource("1_oifup")]
+position = Vector2(-223, -175)
+
+[node name="BoardSpace15" parent="Board" unique_id=140241932 instance=ExtResource("1_oifup")]
+position = Vector2(-356, -175)
+
+[node name="BoardSpace16" parent="Board" unique_id=1948688837 instance=ExtResource("1_oifup")]
+position = Vector2(-487, -175)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=85423000]
+
+[node name="Dice" parent="." unique_id=1816804988 instance=ExtResource("2_ahpuo")]
+position = Vector2(2, 269)
+scale = Vector2(0.9303459, 0.93484116)
+
+[node name="Label" type="Label" parent="." unique_id=1492186370]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="SpaceCount" type="Label" parent="." unique_id=1646078757]
+offset_left = -556.0
+offset_top = -306.0
+offset_right = -516.0
+offset_bottom = -283.0
+
+[node name="Players" type="Node2D" parent="." unique_id=1924121899]
+
+[node name="Player" parent="Players" unique_id=451365022 instance=ExtResource("4_on526")]
+
+[node name="Player2" parent="Players" unique_id=1935174568 instance=ExtResource("4_on526")]
+
+[node name="Player3" parent="Players" unique_id=1271630098 instance=ExtResource("4_on526")]
+
+[node name="Player4" parent="Players" unique_id=2131250476 instance=ExtResource("4_on526")]
+
+[connection signal="roll_done" from="Dice" to="." method="_on_dice_roll_done"]

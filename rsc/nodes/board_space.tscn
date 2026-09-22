@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bqbgog6cwr1yd"]
+
+[ext_resource type="Texture2D" uid="uid://bc1ai8noo43ni" path="res://rsc/assets/icon.svg" id="1_rqmst"]
+
+[node name="BoardSpace" type="Marker2D" unique_id=1127422891]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1521811433]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_rqmst")

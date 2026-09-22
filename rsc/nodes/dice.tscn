@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cyo4rbixprw0q"]
+
+[ext_resource type="Texture2D" uid="uid://mnodatt400rp" path="res://rsc/assets/dice.png" id="1_ch1x7"]
+[ext_resource type="Script" uid="uid://c6ququi3e5vka" path="res://rsc/scripts/dice.gd" id="1_jln1d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26k7k"]
+size = Vector2(112, 112)
+
+[node name="Dice" type="StaticBody2D" unique_id=1816804988]
+input_pickable = true
+script = ExtResource("1_jln1d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1479666079]
+shape = SubResource("RectangleShape2D_26k7k")
+
+[node name="Faces" type="Node2D" parent="." unique_id=918190259]
+
+[node name="Face1" type="Sprite2D" parent="Faces" unique_id=741112723]
+scale = Vector2(7, 7)
+texture = ExtResource("1_ch1x7")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="Face2" type="Sprite2D" parent="Faces" unique_id=1987245995]
+scale = Vector2(7, 7)
+texture = ExtResource("1_ch1x7")
+region_enabled = true
+region_rect = Rect2(16, 0, 16, 16)
+
+[node name="Face3" type="Sprite2D" parent="Faces" unique_id=1337894842]
+scale = Vector2(7, 7)
+texture = ExtResource("1_ch1x7")
+region_enabled = true
+region_rect = Rect2(32, 0, 16, 16)
+
+[node name="Face4" type="Sprite2D" parent="Faces" unique_id=1224836568]
+scale = Vector2(7, 7)
+texture = ExtResource("1_ch1x7")
+region_enabled = true
+region_rect = Rect2(48, 0, 16, 16)
+
+[node name="Face5" type="Sprite2D" parent="Faces" unique_id=870531237]
+scale = Vector2(7, 7)
+texture = ExtResource("1_ch1x7")
+region_enabled = true
+region_rect = Rect2(64, 0, 16, 16)
+
+[node name="Face6" type="Sprite2D" parent="Faces" unique_id=94491772]
+scale = Vector2(7, 7)
+texture = ExtResource("1_ch1x7")
+region_enabled = true
+region_rect = Rect2(80, 0, 16, 16)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b6b4uc71nlht5"]
+
+[ext_resource type="Script" uid="uid://gut68ev0omns" path="res://rsc/scripts/player.gd" id="1_uyhhx"]
+[ext_resource type="Texture2D" uid="uid://bc1ai8noo43ni" path="res://rsc/assets/icon.svg" id="2_itow1"]
+
+[node name="Player" type="Node2D" unique_id=451365022]
+script = ExtResource("1_uyhhx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=743812122]
+texture = ExtResource("2_itow1")
+
+[node name="Label" type="Label" parent="." unique_id=489466688]
+offset_left = -19.0
+offset_top = -92.0
+offset_right = 21.0
+offset_bottom = -69.0
