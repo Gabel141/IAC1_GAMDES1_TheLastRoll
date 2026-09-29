@@ -1,64 +1,66 @@
-[gd_scene format=3 uid="uid://lpderc8bamrw"]
+[gd_scene format=4 uid="uid://lpderc8bamrw"]
 
 [ext_resource type="Script" uid="uid://dh767vdmnla1b" path="res://rsc/scripts/main_script.gd" id="1_ahpuo"]
-[ext_resource type="PackedScene" uid="uid://bqbgog6cwr1yd" path="res://rsc/nodes/board_space.tscn" id="1_oifup"]
 [ext_resource type="PackedScene" uid="uid://cyo4rbixprw0q" path="res://rsc/nodes/dice.tscn" id="2_ahpuo"]
 [ext_resource type="PackedScene" uid="uid://b6b4uc71nlht5" path="res://rsc/nodes/player.tscn" id="4_on526"]
+[ext_resource type="Texture2D" uid="uid://c0mw3i107tedr" path="res://rsc/assets/colortileset.png" id="5_u3rmg"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_u3rmg"]
+tile_data = PackedInt32Array(0, 65536, 7, 1, 196608, 7)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ebps"]
+texture = ExtResource("5_u3rmg")
+margins = Vector2i(1, 3)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qt438"]
+tile_size = Vector2i(32, 32)
+custom_data_layer_0/name = "Start"
+custom_data_layer_0/type = 0
+custom_data_layer_1/name = "End"
+custom_data_layer_1/type = 0
+custom_data_layer_2/name = "Empty"
+custom_data_layer_2/type = 0
+sources/0 = SubResource("TileSetAtlasSource_6ebps")
+pattern_0 = SubResource("TileMapPattern_u3rmg")
 
 [node name="Root" type="Node2D" unique_id=84001233]
 script = ExtResource("1_ahpuo")
 
-[node name="Board" type="Node2D" parent="." unique_id=297616316]
-
-[node name="BoardSpace" parent="Board" unique_id=1127422891 instance=ExtResource("1_oifup")]
-position = Vector2(-487, -273)
-
-[node name="BoardSpace2" parent="Board" unique_id=1180916475 instance=ExtResource("1_oifup")]
-position = Vector2(-356, -273)
-
-[node name="BoardSpace3" parent="Board" unique_id=185146691 instance=ExtResource("1_oifup")]
-position = Vector2(-223, -273)
-
-[node name="BoardSpace4" parent="Board" unique_id=1233252411 instance=ExtResource("1_oifup")]
-position = Vector2(-90, -273)
-
-[node name="BoardSpace5" parent="Board" unique_id=941899072 instance=ExtResource("1_oifup")]
-position = Vector2(48, -273)
-
-[node name="BoardSpace6" parent="Board" unique_id=1274936710 instance=ExtResource("1_oifup")]
-position = Vector2(183, -273)
-
-[node name="BoardSpace7" parent="Board" unique_id=163356842 instance=ExtResource("1_oifup")]
-position = Vector2(322, -273)
-
-[node name="BoardSpace8" parent="Board" unique_id=976931646 instance=ExtResource("1_oifup")]
-position = Vector2(458, -273)
-
-[node name="BoardSpace9" parent="Board" unique_id=48969771 instance=ExtResource("1_oifup")]
-position = Vector2(458, -175)
-
-[node name="BoardSpace10" parent="Board" unique_id=740637464 instance=ExtResource("1_oifup")]
-position = Vector2(322, -175)
-
-[node name="BoardSpace11" parent="Board" unique_id=413681986 instance=ExtResource("1_oifup")]
-position = Vector2(183, -175)
-
-[node name="BoardSpace12" parent="Board" unique_id=1903621610 instance=ExtResource("1_oifup")]
-position = Vector2(54, -175)
-
-[node name="BoardSpace13" parent="Board" unique_id=1728387870 instance=ExtResource("1_oifup")]
-position = Vector2(-90, -175)
-
-[node name="BoardSpace14" parent="Board" unique_id=1149641705 instance=ExtResource("1_oifup")]
-position = Vector2(-223, -175)
-
-[node name="BoardSpace15" parent="Board" unique_id=140241932 instance=ExtResource("1_oifup")]
-position = Vector2(-356, -175)
-
-[node name="BoardSpace16" parent="Board" unique_id=1948688837 instance=ExtResource("1_oifup")]
-position = Vector2(-487, -175)
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=85423000]
+position = Vector2(241, 140)
+zoom = Vector2(1.5, 1.5)
 
 [node name="Dice" parent="." unique_id=1816804988 instance=ExtResource("2_ahpuo")]
 position = Vector2(2, 269)
@@ -74,14 +76,16 @@ offset_top = -306.0
 offset_right = -516.0
 offset_bottom = -283.0
 
+[node name="MapLayers" type="Node2D" parent="." unique_id=938287165]
+
+[node name="BoardPath" type="TileMapLayer" parent="MapLayers" unique_id=782422254]
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAAAAAABAAAAAAABAAcAAAACAAAAAAADAAcAAAADAAAAAAABAAcAAAAEAAAAAAADAAcAAAAFAAAAAAABAAcAAAAGAAAAAAADAAcAAAAHAAAAAAABAAcAAAAIAAAAAAADAAcAAAAJAAAAAAABAAcAAAAKAAAAAAADAAcAAAALAAAAAAABAAcAAAAMAAAAAAADAAcAAAANAAAAAAABAAcAAFANAAEAAAADAAcAAFAMAAEAAAABAAcAADALAAEAAAADAAcAADAKAAEAAAABAAcAADAJAAEAAAADAAcAAAAIAAEAAAABAAcAAAAHAAEAAAADAAcAAAAGAAEAAAABAAcAAAAFAAEAAAADAAcAAAAEAAEAAAABAAcAAAADAAEAAAADAAcAAAACAAEAAAABAAcAAAABAAEAAAADAAcAAAAAAAEAAAABAAcAAAABAAIAAAABAAcAADAAAAIAAAADAAcAADADAAIAAAABAAcAAAACAAIAAAADAAcAADAEAAIAAAADAAcAAAAGAAIAAAADAAcAAAAFAAIAAAABAAcAAAAHAAIAAAABAAcAAAAIAAIAAAADAAcAAAAKAAIAAAADAAcAAAAJAAIAAAABAAcAAAANAAIAAAABAAcAAFAMAAIAAAADAAcAAAALAAIAAAABAAcAAAANAAMAAAADAAcAAFAMAAMAAAABAAcAADALAAMAAAADAAcAADAKAAMAAAABAAcAADAJAAMAAAADAAcAADAIAAMAAAABAAcAADAHAAMAAAADAAcAADAGAAMAAAABAAcAADAFAAMAAAADAAcAADAEAAMAAAABAAcAADADAAMAAAADAAcAADACAAMAAAABAAcAADABAAMAAAADAAcAADAAAAMAAAABAAcAAFAAAAQAAAADAAcAAFA=")
+tile_set = SubResource("TileSet_qt438")
+
 [node name="Players" type="Node2D" parent="." unique_id=1924121899]
 
 [node name="Player" parent="Players" unique_id=451365022 instance=ExtResource("4_on526")]
 
 [node name="Player2" parent="Players" unique_id=1935174568 instance=ExtResource("4_on526")]
-
-[node name="Player3" parent="Players" unique_id=1271630098 instance=ExtResource("4_on526")]
-
-[node name="Player4" parent="Players" unique_id=2131250476 instance=ExtResource("4_on526")]
 
 [connection signal="roll_done" from="Dice" to="." method="_on_dice_roll_done"]
