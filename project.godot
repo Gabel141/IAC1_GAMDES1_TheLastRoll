@@ -11,12 +11,14 @@ config_version=5
 [application]
 
 config/name="IAC1_GAMDES1_TheLastRoll"
-run/main_scene="uid://lpderc8bamrw"
+run/main_scene="uid://dul4spvl62upy"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://rsc/assets/icon.svg"
 
 [display]
 
+window/size/viewport_width=720
+window/size/viewport_height=480
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

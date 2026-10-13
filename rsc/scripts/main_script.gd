@@ -9,16 +9,19 @@ signal board_space_total(index:int)
 var player_count
 var player_turn
 var player_id
+var board_space_count
 
 var TRACK_PATH: Array[Vector2i] = []
 
 func _ready() -> void:
 	
 	# used for creating an array of tiles
-	
-	for i in range(5):
-		for j in range(13):
+	board_space_count = 0
+
+	for i in range(4):
+		for j in range(10):
 			TRACK_PATH.push_back(Vector2i(j,i))
+			board_space_count += 1
 
 	
 	# start of game prep
@@ -28,7 +31,7 @@ func _ready() -> void:
 	player_count = $Players.get_child_count()
 	
 	label.text = " "
-	board_space_total.emit(boardmap.get_used_cells().size())
+	board_space_total.emit(board_space_count)
 	
 	# gets all players, puts them at the starting position, and connects their signals
 	var start_tile = TRACK_PATH[0]
