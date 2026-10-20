@@ -9,12 +9,12 @@ var board_position
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	board_position = 0
-	$"../..".board_space_total.connect(_board_space_total)
+	$"../..".board_space_total_count.connect(_board_space_total)
 	$"../..".dice_number.connect(_on_root_dice_number)
+
 
 func _board_space_total(index: int) -> void:
 	board_space_total = int(index)
-	print(board_space_total)
 
 func _on_root_dice_number(index: int, player: Node) -> void:
 	if player == self:

@@ -1,9 +1,103 @@
-[gd_scene format=3 uid="uid://bqbgog6cwr1yd"]
+[gd_scene format=3 uid="uid://bil1fjw7vxxun"]
 
-[ext_resource type="Texture2D" uid="uid://bc1ai8noo43ni" path="res://rsc/assets/icon.svg" id="1_rqmst"]
+[ext_resource type="Script" uid="uid://beikowv073frx" path="res://rsc/scripts/board_space.gd" id="1_s4d1t"]
+[ext_resource type="Texture2D" uid="uid://citpicwxgevrp" path="res://rsc/assets/spaces/empty.png" id="2_5clg8"]
+[ext_resource type="Texture2D" uid="uid://csxcgamnl48by" path="res://rsc/assets/spaces/boss.png" id="2_5wpkl"]
+[ext_resource type="Texture2D" uid="uid://coqi5oe7fkr5s" path="res://rsc/assets/spaces/buff.png" id="3_rv3re"]
+[ext_resource type="Texture2D" uid="uid://dhv837ix6he8f" path="res://rsc/assets/spaces/forced_combat.png" id="5_vlt0c"]
+[ext_resource type="Texture2D" uid="uid://6v41kdm8oa8d" path="res://rsc/assets/spaces/heal.png" id="6_ai653"]
+[ext_resource type="Texture2D" uid="uid://cwibb6cpowpnk" path="res://rsc/assets/spaces/monster.png" id="7_rogyb"]
+[ext_resource type="Texture2D" uid="uid://dfemalegpv7vq" path="res://rsc/assets/spaces/random.png" id="8_peh30"]
+[ext_resource type="Texture2D" uid="uid://bpakq8gh8ds40" path="res://rsc/assets/spaces/shop.png" id="9_mfnt7"]
+[ext_resource type="Texture2D" uid="uid://dei3bdmyj3knc" path="res://rsc/assets/spaces/trap.png" id="10_4gan7"]
+[ext_resource type="Texture2D" uid="uid://bcf0t140g8sod" path="res://rsc/assets/spaces/treasure.png" id="11_07rut"]
 
-[node name="BoardSpace" type="Marker2D" unique_id=1127422891]
+[sub_resource type="SpriteFrames" id="SpriteFrames_26k7k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5wpkl")
+}],
+"loop": 1,
+"name": &"boss",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_rv3re")
+}],
+"loop": 1,
+"name": &"buff",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5clg8")
+}],
+"loop": 1,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_vlt0c")
+}],
+"loop": 1,
+"name": &"forced_combat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ai653")
+}],
+"loop": 1,
+"name": &"heal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_rogyb")
+}],
+"loop": 1,
+"name": &"monster",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_peh30")
+}],
+"loop": 1,
+"name": &"random",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_mfnt7")
+}],
+"loop": 1,
+"name": &"shop",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_4gan7")
+}],
+"loop": 1,
+"name": &"trap",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_07rut")
+}],
+"loop": 1,
+"name": &"treasure",
+"speed": 5.0
+}]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1521811433]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_rqmst")
+[node name="BoardSpace" type="Node2D" unique_id=144697140]
+script = ExtResource("1_s4d1t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=401299965]
+sprite_frames = SubResource("SpriteFrames_26k7k")
+animation = &"empty"

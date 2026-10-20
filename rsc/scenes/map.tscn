@@ -1,0 +1,315 @@
+[gd_scene format=3 uid="uid://dyi7h6kvpt03w"]
+
+[ext_resource type="PackedScene" uid="uid://bil1fjw7vxxun" path="res://rsc/nodes/board_space.tscn" id="1_daf35"]
+
+[node name="Map" type="Node2D" unique_id=1052135099]
+
+[node name="BoardSpace0" parent="." unique_id=144697140 instance=ExtResource("1_daf35")]
+position = Vector2(32, 32)
+
+[node name="BoardSpace1" parent="." unique_id=1792692121 instance=ExtResource("1_daf35")]
+position = Vector2(32, 128)
+space_type = "treasure"
+
+[node name="BoardSpace2" parent="." unique_id=1670073030 instance=ExtResource("1_daf35")]
+position = Vector2(128, 128)
+
+[node name="BoardSpace3" parent="." unique_id=420503753 instance=ExtResource("1_daf35")]
+position = Vector2(224, 128)
+space_type = "monster"
+
+[node name="BoardSpace4" parent="." unique_id=1336689335 instance=ExtResource("1_daf35")]
+position = Vector2(320, 128)
+space_type = "random"
+
+[node name="BoardSpace5" parent="." unique_id=682744392 instance=ExtResource("1_daf35")]
+position = Vector2(416, 128)
+
+[node name="BoardSpace6" parent="." unique_id=846420012 instance=ExtResource("1_daf35")]
+position = Vector2(512, 128)
+space_type = "monster"
+
+[node name="BoardSpace7" parent="." unique_id=806500140 instance=ExtResource("1_daf35")]
+position = Vector2(608, 128)
+space_type = "trap"
+
+[node name="BoardSpace8" parent="." unique_id=1279216245 instance=ExtResource("1_daf35")]
+position = Vector2(704, 128)
+space_type = "monster"
+
+[node name="BoardSpace9" parent="." unique_id=1130968019 instance=ExtResource("1_daf35")]
+position = Vector2(800, 128)
+space_type = "buff"
+
+[node name="BoardSpace10" parent="." unique_id=1744325262 instance=ExtResource("1_daf35")]
+position = Vector2(896, 128)
+space_type = "random"
+
+[node name="BoardSpace11" parent="." unique_id=64146418 instance=ExtResource("1_daf35")]
+position = Vector2(896, 224)
+space_type = "treasure"
+
+[node name="BoardSpace12" parent="." unique_id=2134918562 instance=ExtResource("1_daf35")]
+position = Vector2(800, 224)
+space_type = "treasure"
+
+[node name="BoardSpace13" parent="." unique_id=2019609929 instance=ExtResource("1_daf35")]
+position = Vector2(704, 224)
+
+[node name="BoardSpace14" parent="." unique_id=1424784963 instance=ExtResource("1_daf35")]
+position = Vector2(608, 224)
+space_type = "monster"
+
+[node name="BoardSpace15" parent="." unique_id=1123941597 instance=ExtResource("1_daf35")]
+position = Vector2(512, 224)
+space_type = "monster"
+
+[node name="BoardSpace16" parent="." unique_id=458851404 instance=ExtResource("1_daf35")]
+position = Vector2(416, 224)
+
+[node name="BoardSpace17" parent="." unique_id=953899904 instance=ExtResource("1_daf35")]
+position = Vector2(320, 224)
+space_type = "random"
+
+[node name="BoardSpace18" parent="." unique_id=1209527152 instance=ExtResource("1_daf35")]
+position = Vector2(224, 224)
+space_type = "treasure"
+
+[node name="BoardSpace19" parent="." unique_id=171314299 instance=ExtResource("1_daf35")]
+position = Vector2(128, 224)
+space_type = "monster"
+
+[node name="BoardSpace20" parent="." unique_id=672732553 instance=ExtResource("1_daf35")]
+position = Vector2(32, 224)
+space_type = "monster"
+
+[node name="BoardSpace21" parent="." unique_id=454723505 instance=ExtResource("1_daf35")]
+position = Vector2(32, 320)
+space_type = "shop"
+
+[node name="BoardSpace22" parent="." unique_id=1824868640 instance=ExtResource("1_daf35")]
+position = Vector2(128, 320)
+space_type = "trap"
+
+[node name="BoardSpace23" parent="." unique_id=1962538340 instance=ExtResource("1_daf35")]
+position = Vector2(224, 320)
+space_type = "random"
+
+[node name="BoardSpace24" parent="." unique_id=1606009518 instance=ExtResource("1_daf35")]
+position = Vector2(320, 320)
+space_type = "monster"
+
+[node name="BoardSpace25" parent="." unique_id=1820619884 instance=ExtResource("1_daf35")]
+position = Vector2(416, 320)
+
+[node name="BoardSpace26" parent="." unique_id=1560838579 instance=ExtResource("1_daf35")]
+position = Vector2(512, 320)
+space_type = "buff"
+
+[node name="BoardSpace27" parent="." unique_id=37477640 instance=ExtResource("1_daf35")]
+position = Vector2(608, 320)
+space_type = "monster"
+
+[node name="BoardSpace28" parent="." unique_id=1914209055 instance=ExtResource("1_daf35")]
+position = Vector2(704, 320)
+space_type = "treasure"
+
+[node name="BoardSpace29" parent="." unique_id=2077778445 instance=ExtResource("1_daf35")]
+position = Vector2(800, 320)
+space_type = "random"
+
+[node name="BoardSpace30" parent="." unique_id=2116309820 instance=ExtResource("1_daf35")]
+position = Vector2(896, 320)
+
+[node name="BoardSpace31" parent="." unique_id=2104827144 instance=ExtResource("1_daf35")]
+position = Vector2(896, 416)
+space_type = "heal"
+
+[node name="BoardSpace32" parent="." unique_id=325205211 instance=ExtResource("1_daf35")]
+position = Vector2(800, 416)
+space_type = "monster"
+
+[node name="BoardSpace33" parent="." unique_id=1103488611 instance=ExtResource("1_daf35")]
+position = Vector2(704, 416)
+
+[node name="BoardSpace34" parent="." unique_id=638556869 instance=ExtResource("1_daf35")]
+position = Vector2(608, 416)
+space_type = "trap"
+
+[node name="BoardSpace35" parent="." unique_id=1186037891 instance=ExtResource("1_daf35")]
+position = Vector2(512, 416)
+
+[node name="BoardSpace36" parent="." unique_id=1324101416 instance=ExtResource("1_daf35")]
+position = Vector2(416, 416)
+space_type = "monster"
+
+[node name="BoardSpace37" parent="." unique_id=1062949522 instance=ExtResource("1_daf35")]
+position = Vector2(320, 416)
+
+[node name="BoardSpace38" parent="." unique_id=1256134278 instance=ExtResource("1_daf35")]
+position = Vector2(224, 416)
+space_type = "monster"
+
+[node name="BoardSpace39" parent="." unique_id=1034523224 instance=ExtResource("1_daf35")]
+position = Vector2(128, 416)
+space_type = "random"
+
+[node name="BoardSpace40" parent="." unique_id=405082529 instance=ExtResource("1_daf35")]
+position = Vector2(32, 416)
+space_type = "boss"
+
+[node name="BoardSpace41" parent="." unique_id=453509630 instance=ExtResource("1_daf35")]
+position = Vector2(32, 512)
+space_type = "shop"
+
+[node name="BoardSpace42" parent="." unique_id=451905307 instance=ExtResource("1_daf35")]
+position = Vector2(128, 512)
+space_type = "monster"
+
+[node name="BoardSpace43" parent="." unique_id=2016363100 instance=ExtResource("1_daf35")]
+position = Vector2(224, 512)
+space_type = "trap"
+
+[node name="BoardSpace44" parent="." unique_id=203699507 instance=ExtResource("1_daf35")]
+position = Vector2(320, 512)
+space_type = "treasure"
+
+[node name="BoardSpace45" parent="." unique_id=2136726088 instance=ExtResource("1_daf35")]
+position = Vector2(416, 512)
+space_type = "monster"
+
+[node name="BoardSpace46" parent="." unique_id=1994515015 instance=ExtResource("1_daf35")]
+position = Vector2(512, 512)
+
+[node name="BoardSpace47" parent="." unique_id=845115346 instance=ExtResource("1_daf35")]
+position = Vector2(608, 512)
+space_type = "random"
+
+[node name="BoardSpace48" parent="." unique_id=762416643 instance=ExtResource("1_daf35")]
+position = Vector2(704, 512)
+
+[node name="BoardSpace49" parent="." unique_id=2002033846 instance=ExtResource("1_daf35")]
+position = Vector2(800, 512)
+space_type = "trap"
+
+[node name="BoardSpace50" parent="." unique_id=1413749596 instance=ExtResource("1_daf35")]
+position = Vector2(896, 512)
+space_type = "monster"
+
+[node name="BoardSpace51" parent="." unique_id=602849407 instance=ExtResource("1_daf35")]
+position = Vector2(896, 608)
+
+[node name="BoardSpace52" parent="." unique_id=1353635555 instance=ExtResource("1_daf35")]
+position = Vector2(800, 608)
+space_type = "random"
+
+[node name="BoardSpace53" parent="." unique_id=1113177785 instance=ExtResource("1_daf35")]
+position = Vector2(704, 608)
+space_type = "monster"
+
+[node name="BoardSpace54" parent="." unique_id=227752218 instance=ExtResource("1_daf35")]
+position = Vector2(608, 608)
+space_type = "treasure"
+
+[node name="BoardSpace55" parent="." unique_id=1522028546 instance=ExtResource("1_daf35")]
+position = Vector2(512, 608)
+space_type = "monster"
+
+[node name="BoardSpace56" parent="." unique_id=1308545869 instance=ExtResource("1_daf35")]
+position = Vector2(416, 608)
+space_type = "heal"
+
+[node name="BoardSpace57" parent="." unique_id=551063532 instance=ExtResource("1_daf35")]
+position = Vector2(320, 608)
+space_type = "monster"
+
+[node name="BoardSpace58" parent="." unique_id=736155941 instance=ExtResource("1_daf35")]
+position = Vector2(224, 608)
+space_type = "random"
+
+[node name="BoardSpace59" parent="." unique_id=353189972 instance=ExtResource("1_daf35")]
+position = Vector2(128, 608)
+space_type = "trap"
+
+[node name="BoardSpace60" parent="." unique_id=2091163239 instance=ExtResource("1_daf35")]
+position = Vector2(32, 608)
+space_type = "buff"
+
+[node name="BoardSpace61" parent="." unique_id=601645641 instance=ExtResource("1_daf35")]
+position = Vector2(32, 704)
+space_type = "shop"
+
+[node name="BoardSpace62" parent="." unique_id=1999257838 instance=ExtResource("1_daf35")]
+position = Vector2(128, 704)
+space_type = "trap"
+
+[node name="BoardSpace63" parent="." unique_id=1938199599 instance=ExtResource("1_daf35")]
+position = Vector2(224, 704)
+space_type = "treasure"
+
+[node name="BoardSpace64" parent="." unique_id=1961984590 instance=ExtResource("1_daf35")]
+position = Vector2(320, 704)
+space_type = "random"
+
+[node name="BoardSpace65" parent="." unique_id=1475351540 instance=ExtResource("1_daf35")]
+position = Vector2(416, 704)
+space_type = "forced_combat"
+
+[node name="BoardSpace66" parent="." unique_id=1209249885 instance=ExtResource("1_daf35")]
+position = Vector2(512, 704)
+
+[node name="BoardSpace67" parent="." unique_id=1086199206 instance=ExtResource("1_daf35")]
+position = Vector2(608, 704)
+space_type = "buff"
+
+[node name="BoardSpace68" parent="." unique_id=972689407 instance=ExtResource("1_daf35")]
+position = Vector2(704, 704)
+space_type = "monster"
+
+[node name="BoardSpace69" parent="." unique_id=1946996279 instance=ExtResource("1_daf35")]
+position = Vector2(800, 704)
+space_type = "trap"
+
+[node name="BoardSpace70" parent="." unique_id=1579435914 instance=ExtResource("1_daf35")]
+position = Vector2(896, 704)
+
+[node name="BoardSpace71" parent="." unique_id=942343466 instance=ExtResource("1_daf35")]
+position = Vector2(896, 800)
+space_type = "forced_combat"
+
+[node name="BoardSpace72" parent="." unique_id=1603010205 instance=ExtResource("1_daf35")]
+position = Vector2(800, 800)
+
+[node name="BoardSpace73" parent="." unique_id=541431254 instance=ExtResource("1_daf35")]
+position = Vector2(704, 800)
+space_type = "random"
+
+[node name="BoardSpace74" parent="." unique_id=212801235 instance=ExtResource("1_daf35")]
+position = Vector2(608, 800)
+space_type = "treasure"
+
+[node name="BoardSpace75" parent="." unique_id=1004857328 instance=ExtResource("1_daf35")]
+position = Vector2(512, 800)
+space_type = "forced_combat"
+
+[node name="BoardSpace76" parent="." unique_id=1870782038 instance=ExtResource("1_daf35")]
+position = Vector2(416, 800)
+space_type = "trap"
+
+[node name="BoardSpace77" parent="." unique_id=706443570 instance=ExtResource("1_daf35")]
+position = Vector2(320, 800)
+
+[node name="BoardSpace78" parent="." unique_id=1694831584 instance=ExtResource("1_daf35")]
+position = Vector2(224, 800)
+space_type = "trap"
+
+[node name="BoardSpace79" parent="." unique_id=2026828869 instance=ExtResource("1_daf35")]
+position = Vector2(128, 800)
+space_type = "forced_combat"
+
+[node name="BoardSpace80" parent="." unique_id=474175920 instance=ExtResource("1_daf35")]
+position = Vector2(32, 800)
+space_type = "boss"
+
+[node name="BoardSpace81" parent="." unique_id=1385747075 instance=ExtResource("1_daf35")]
+position = Vector2(32, 896)

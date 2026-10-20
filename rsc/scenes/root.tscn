@@ -1,69 +1,17 @@
-[gd_scene format=4 uid="uid://lpderc8bamrw"]
+[gd_scene format=3 uid="uid://lpderc8bamrw"]
 
 [ext_resource type="Script" uid="uid://dh767vdmnla1b" path="res://rsc/scripts/main_script.gd" id="1_ahpuo"]
 [ext_resource type="PackedScene" uid="uid://cyo4rbixprw0q" path="res://rsc/nodes/dice.tscn" id="2_ahpuo"]
 [ext_resource type="PackedScene" uid="uid://b6b4uc71nlht5" path="res://rsc/nodes/player.tscn" id="4_on526"]
-[ext_resource type="Texture2D" uid="uid://c0mw3i107tedr" path="res://rsc/assets/colortileset.png" id="5_u3rmg"]
-
-[sub_resource type="TileMapPattern" id="TileMapPattern_u3rmg"]
-tile_data = PackedInt32Array(0, 65536, 7, 1, 196608, 7)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ebps"]
-texture = ExtResource("5_u3rmg")
-margins = Vector2i(1, 3)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_qt438"]
-tile_size = Vector2i(32, 32)
-custom_data_layer_0/name = "Start"
-custom_data_layer_0/type = 0
-custom_data_layer_1/name = "End"
-custom_data_layer_1/type = 0
-custom_data_layer_2/name = "Empty"
-custom_data_layer_2/type = 0
-sources/0 = SubResource("TileSetAtlasSource_6ebps")
-pattern_0 = SubResource("TileMapPattern_u3rmg")
+[ext_resource type="PackedScene" uid="uid://dyi7h6kvpt03w" path="res://rsc/scenes/map.tscn" id="5_6ebps"]
 
 [node name="Root" type="Node2D" unique_id=84001233]
 script = ExtResource("1_ahpuo")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=85423000]
-position = Vector2(217, 141)
-zoom = Vector2(1.5, 1.5)
+[node name="Map" parent="." unique_id=1052135099 instance=ExtResource("5_6ebps")]
 
 [node name="Dice" parent="." unique_id=1816804988 instance=ExtResource("2_ahpuo")]
-position = Vector2(397, 239)
+position = Vector2(-187, 195.00002)
 scale = Vector2(0.9303459, 0.93484116)
 
 [node name="Label" type="Label" parent="." unique_id=1492186370]
@@ -76,23 +24,20 @@ offset_top = -306.0
 offset_right = -516.0
 offset_bottom = -283.0
 
-[node name="MapLayers" type="Node2D" parent="." unique_id=938287165]
-
-[node name="BoardPath" type="TileMapLayer" parent="MapLayers" unique_id=782422254]
-tile_map_data = PackedByteArray("AAAAAAAAAAABAAAAAAABAAAAAAABAAcAAAACAAAAAAADAAcAAAADAAAAAAABAAcAAAAEAAAAAAADAAcAAAAFAAAAAAABAAcAAAAGAAAAAAADAAcAAAAHAAAAAAABAAcAAAAIAAAAAAADAAcAAAAJAAAAAAABAAcAAAAJAAEAAAADAAcAAAAIAAEAAAABAAcAAAAHAAEAAAADAAcAAAAGAAEAAAABAAcAAAAFAAEAAAADAAcAAAAEAAEAAAABAAcAAAADAAEAAAADAAcAAAACAAEAAAABAAcAAAABAAEAAAADAAcAAAAAAAEAAAABAAcAAAABAAIAAAABAAcAADAAAAIAAAADAAcAADADAAIAAAABAAcAAAACAAIAAAADAAcAADAEAAIAAAADAAcAAAAGAAIAAAADAAcAAAAFAAIAAAABAAcAAAAHAAIAAAABAAcAAAAIAAIAAAADAAcAAAAJAAIAAAABAAcAAAAIAAMAAAABAAcAADAHAAMAAAADAAcAADAGAAMAAAABAAcAADAFAAMAAAADAAcAADAEAAMAAAABAAcAADADAAMAAAADAAcAADACAAMAAAABAAcAADABAAMAAAADAAcAADAAAAMAAAABAAcAAFAJAAMAAAADAAAAAAA=")
-tile_set = SubResource("TileSet_qt438")
-
 [node name="Players" type="Node2D" parent="." unique_id=1924121899]
 
 [node name="Player" parent="Players" unique_id=451365022 instance=ExtResource("4_on526")]
 
+[node name="Camera2D" type="Camera2D" parent="Players/Player" unique_id=85423000]
+scale = Vector2(4, 4)
+
 [node name="Player2" parent="Players" unique_id=1935174568 instance=ExtResource("4_on526")]
 
 [node name="Button" type="Button" parent="." unique_id=1031701117]
-offset_left = 302.0
-offset_top = 187.0
-offset_right = 339.0
-offset_bottom = 218.0
+offset_left = -61.0
+offset_top = 143.0
+offset_right = -24.0
+offset_bottom = 174.0
 text = "Roll"
 
 [connection signal="roll_done" from="Dice" to="." method="_on_dice_roll_done"]

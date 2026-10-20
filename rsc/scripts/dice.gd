@@ -16,7 +16,7 @@ func _set_start_face():
 	
 	faces.get_child(0).show()
 
-func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_input_event(_viewport: Node, _event: InputEvent, _shape_idx: int) -> void:
 	if Input.is_action_just_pressed("leftClick") and not isRolling:
 		_roll_dice()
 		
