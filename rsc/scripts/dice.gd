@@ -21,7 +21,6 @@ func _on_input_event(_viewport: Node, _event: InputEvent, _shape_idx: int) -> vo
 		_roll_dice()
 		
 
-		
 func _roll_dice():
 	var duration = 1.0
 	

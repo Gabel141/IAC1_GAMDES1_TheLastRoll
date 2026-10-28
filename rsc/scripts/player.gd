@@ -4,14 +4,17 @@ extends Node2D
 var board_space_total
 
 signal player_moved(index:int, player: Node)
+signal player_stats(health: int, m_dice: int, a_dice: int)
 
 var board_position
-# Called when the node enters the scene tree for the first time.
+var hp = 5
+var move_dice = 1
+var atk_dice = 2
+
 func _ready() -> void:
 	board_position = 0
 	$"../..".board_space_total_count.connect(_board_space_total)
 	$"../..".dice_number.connect(_on_root_dice_number)
-
 
 func _board_space_total(index: int) -> void:
 	board_space_total = int(index)

@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://t51qpd7eetxf"]
+
+[ext_resource type="Script" uid="uid://dktophxfy7xi" path="res://rsc/scenes/ui.gd" id="1_gn51o"]
+[ext_resource type="Script" uid="uid://cfc17cjhnd0ef" path="res://rsc/scenes/roll_button.gd" id="2_mnt0g"]
+
+[node name="UI" type="CanvasLayer" unique_id=647479609]
+script = ExtResource("1_gn51o")
+
+[node name="RollTotal" type="Label" parent="." unique_id=1786792285]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 445.0
+offset_top = -34.0
+offset_right = 534.0
+offset_bottom = -11.0
+grow_vertical = 0
+text = "Roll Total: "
+
+[node name="Gold" type="Label" parent="." unique_id=894994427]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -95.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "Gold"
+
+[node name="RollButton" type="Button" parent="." unique_id=1617305917]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -41.0
+offset_right = -13.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Roll"
+script = ExtResource("2_mnt0g")
+
+[node name="PlayerTurn" type="Label" parent="." unique_id=1283394806]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Player Turn"
+
+[node name="Dice" type="Node" parent="." unique_id=1749580532]
+
+[node name="PlayerHP" type="Node" parent="." unique_id=2063121320]
+
+[node name="PlayerHP1" type="Label" parent="PlayerHP" unique_id=948883368]
+visible = false
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = -30.0
+offset_right = 98.0
+offset_bottom = -7.0
+grow_vertical = 0
+text = "Player HP: "
+
+[node name="PlayerHP2" type="Label" parent="PlayerHP" unique_id=1666207858]
+visible = false
+offset_right = 89.0
+offset_bottom = 23.0
+text = "Player 2 HP"
+
+[node name="PlayerHP3" type="Label" parent="PlayerHP" unique_id=222254537]
+visible = false
+offset_top = 25.0
+offset_right = 89.0
+offset_bottom = 48.0
+text = "Player 3 HP"
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerHP4" type="Label" parent="PlayerHP" unique_id=965820312]
+visible = false
+offset_top = 50.0
+offset_right = 89.0
+offset_bottom = 73.0
+text = "Player 4 HP"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="RollButton" to="." method="_on_roll_button_pressed"]
+[connection signal="rollTotal" from="RollButton" to="." method="_on_roll_button_roll_total"]

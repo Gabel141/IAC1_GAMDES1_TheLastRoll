@@ -17,9 +17,9 @@ font_size = 50
 
 [node name="Title" type="Label" parent="." unique_id=1272280927]
 offset_left = -270.0
-offset_top = -200.0
+offset_top = -179.0
 offset_right = 272.0
-offset_bottom = -97.0
+offset_bottom = -76.0
 text = "The Last Roll"
 label_settings = SubResource("LabelSettings_26k7k")
 horizontal_alignment = 1
@@ -35,20 +35,20 @@ text = "Play"
 script = ExtResource("1_s1alf")
 
 [node name="Settings" type="Label" parent="." unique_id=2097204778]
-offset_left = -90.0
-offset_top = 80.0
-offset_right = 104.0
-offset_bottom = 149.0
+offset_left = -96.0
+offset_top = 48.0
+offset_right = 98.0
+offset_bottom = 117.0
 text = "Settings"
 label_settings = SubResource("LabelSettings_qt438")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Quit" type="Label" parent="." unique_id=1019349447]
-offset_left = -52.0
-offset_top = 169.0
-offset_right = 53.0
-offset_bottom = 238.0
+offset_left = -53.0
+offset_top = 105.0
+offset_right = 52.0
+offset_bottom = 174.0
 text = "Quit"
 label_settings = SubResource("LabelSettings_pwj5f")
 
