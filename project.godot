@@ -15,12 +15,19 @@ run/main_scene="uid://dul4spvl62upy"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://rsc/assets/icon.svg"
 
+[autoload]
+
+EventBroker="*uid://cq6dc68u05rs3"
+Global="*uid://cq743ymoqca7u"
+
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/event_bus/plugin.cfg")
 
 [input]
 

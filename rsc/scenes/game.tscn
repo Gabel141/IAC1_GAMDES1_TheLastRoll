@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dh767vdmnla1b" path="res://rsc/scripts/main_script.gd" id="1_v3kq4"]
 [ext_resource type="PackedScene" uid="uid://t51qpd7eetxf" path="res://rsc/scenes/ui.tscn" id="2_gb63g"]
 [ext_resource type="PackedScene" uid="uid://dyi7h6kvpt03w" path="res://rsc/scenes/map.tscn" id="3_qb80w"]
+[ext_resource type="Script" uid="uid://bqe76hdfcr0hr" path="res://rsc/scripts/map.gd" id="4_v3kq4"]
 [ext_resource type="PackedScene" uid="uid://b6b4uc71nlht5" path="res://rsc/nodes/player.tscn" id="5_51q8l"]
 
 [node name="Root" type="Node2D" unique_id=84001233]
@@ -13,10 +14,7 @@ script = ExtResource("1_v3kq4")
 [node name="UI" parent="." unique_id=647479609 instance=ExtResource("2_gb63g")]
 
 [node name="Map" parent="." unique_id=1052135099 instance=ExtResource("3_qb80w")]
-
-[node name="Label" type="Label" parent="." unique_id=1492186370]
-offset_right = 40.0
-offset_bottom = 23.0
+script = ExtResource("4_v3kq4")
 
 [node name="SpaceCount" type="Label" parent="." unique_id=1646078757]
 offset_left = -556.0
@@ -30,5 +28,11 @@ offset_bottom = -283.0
 
 [node name="Player2" parent="Players" unique_id=1935174568 instance=ExtResource("5_51q8l")]
 
-[connection signal="diceRolling" from="UI" to="." method="_on_ui_dice_rolling"]
+[node name="Audio" type="Node" parent="." unique_id=1094215977]
+
+[node name="SFX" type="AudioStreamPlayer" parent="Audio" unique_id=492633479]
+
+[node name="Music" type="AudioStreamPlayer" parent="Audio" unique_id=1621833672]
+
+[connection signal="endTurn" from="UI" to="." method="_end_turn"]
 [connection signal="movementDiceRolled" from="UI" to="." method="_on_dice_roll_done"]

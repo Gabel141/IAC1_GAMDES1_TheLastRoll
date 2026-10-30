@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://t51qpd7eetxf"]
 
-[ext_resource type="Script" uid="uid://dktophxfy7xi" path="res://rsc/scenes/ui.gd" id="1_gn51o"]
-[ext_resource type="Script" uid="uid://cfc17cjhnd0ef" path="res://rsc/scenes/roll_button.gd" id="2_mnt0g"]
+[ext_resource type="Script" uid="uid://dktophxfy7xi" path="res://rsc/scripts/ui.gd" id="1_gn51o"]
+[ext_resource type="Script" uid="uid://cfc17cjhnd0ef" path="res://rsc/scripts/roll_button.gd" id="2_mnt0g"]
+[ext_resource type="Script" uid="uid://bt5ocedsggbgd" path="res://rsc/scripts/dice_parent.gd" id="3_gn51o"]
+[ext_resource type="AudioStream" uid="uid://m5xj682ftuf0" path="res://rsc/assets/sfx/Roll 1d6.wav" id="4_e8n0n"]
 
 [node name="UI" type="CanvasLayer" unique_id=647479609]
 script = ExtResource("1_gn51o")
@@ -41,6 +43,35 @@ grow_vertical = 0
 text = "Roll"
 script = ExtResource("2_mnt0g")
 
+[node name="EndTurnButton" type="Button" parent="." unique_id=2005079889]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "End Turn"
+
+[node name="FightButton" type="Button" parent="." unique_id=146823561]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5
+offset_top = -15.5
+offset_right = 27.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "FIGHT"
+
 [node name="PlayerTurn" type="Label" parent="." unique_id=1283394806]
 anchors_preset = 5
 anchor_left = 0.5
@@ -52,6 +83,7 @@ grow_horizontal = 2
 text = "Player Turn"
 
 [node name="Dice" type="Node" parent="." unique_id=1749580532]
+script = ExtResource("3_gn51o")
 
 [node name="PlayerHP" type="Node" parent="." unique_id=2063121320]
 
@@ -89,5 +121,34 @@ offset_bottom = 73.0
 text = "Player 4 HP"
 metadata/_edit_use_anchors_ = true
 
+[node name="checkButton" type="Button" parent="." unique_id=103100625]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "TEST"
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=321228542]
+stream = ExtResource("4_e8n0n")
+
+[node name="Debug" type="Label" parent="." unique_id=1407547738]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_right = 40.0
+offset_bottom = 11.5
+grow_vertical = 2
+
 [connection signal="pressed" from="RollButton" to="." method="_on_roll_button_pressed"]
 [connection signal="rollTotal" from="RollButton" to="." method="_on_roll_button_roll_total"]
+[connection signal="pressed" from="EndTurnButton" to="." method="_end_turn_pressed"]
+[connection signal="pressed" from="FightButton" to="." method="_fight"]
+[connection signal="pressed" from="checkButton" to="." method="_test_dice"]

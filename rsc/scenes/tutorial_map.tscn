@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cd6xicuvog7xl"]
+
+[ext_resource type="PackedScene" uid="uid://bil1fjw7vxxun" path="res://rsc/nodes/board_space.tscn" id="1_85j8y"]
+[ext_resource type="Script" uid="uid://bqe76hdfcr0hr" path="res://rsc/scripts/map.gd" id="1_krntc"]
+
+[node name="Map" type="Node2D" unique_id=1052135099]
+script = ExtResource("1_krntc")
+
+[node name="BoardSpace0" parent="." unique_id=144697140 instance=ExtResource("1_85j8y")]
+position = Vector2(32, 32)
+
+[node name="BoardSpace1" parent="." unique_id=1792692121 instance=ExtResource("1_85j8y")]
+position = Vector2(32, 128)
+space_type = "buff"
+
+[node name="BoardSpace2" parent="." unique_id=1670073030 instance=ExtResource("1_85j8y")]
+position = Vector2(128, 128)
+
+[node name="BoardSpace3" parent="." unique_id=420503753 instance=ExtResource("1_85j8y")]
+position = Vector2(224, 128)
+space_type = "heal"
+
+[node name="BoardSpace4" parent="." unique_id=1336689335 instance=ExtResource("1_85j8y")]
+position = Vector2(320, 128)
+space_type = "monster"
+
+[node name="BoardSpace5" parent="." unique_id=682744392 instance=ExtResource("1_85j8y")]
+position = Vector2(416, 128)
+space_type = "random"
+
+[node name="BoardSpace6" parent="." unique_id=846420012 instance=ExtResource("1_85j8y")]
+position = Vector2(512, 128)
+space_type = "shop"
+
+[node name="BoardSpace7" parent="." unique_id=806500140 instance=ExtResource("1_85j8y")]
+position = Vector2(608, 128)
+space_type = "trap"
+
+[node name="BoardSpace8" parent="." unique_id=1279216245 instance=ExtResource("1_85j8y")]
+position = Vector2(704, 128)
+space_type = "treasure"
+
+[node name="BoardSpace9" parent="." unique_id=1130968019 instance=ExtResource("1_85j8y")]
+position = Vector2(800, 128)
+space_type = "forced_combat"
+
+[node name="BoardSpace10" parent="." unique_id=1744325262 instance=ExtResource("1_85j8y")]
+position = Vector2(896, 128)
+space_type = "boss"
+
+[node name="BoardSpace11" parent="." unique_id=509193772 instance=ExtResource("1_85j8y")]
+position = Vector2(992, 128)
+space_type = "win"

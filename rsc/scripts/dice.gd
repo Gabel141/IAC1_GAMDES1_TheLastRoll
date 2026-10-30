@@ -22,10 +22,11 @@ func _on_input_event(_viewport: Node, _event: InputEvent, _shape_idx: int) -> vo
 		
 
 func _roll_dice():
+	var random_roll = randi_range(1, 6)
 	var duration = 1.0
 	
 	isRolling = true
-	
+	roll_done.emit(random_roll)
 	while duration > 0:
 		var newIndex = faces.get_children().pick_random().get_index()
 		faces.get_child(currentIndex).hide()
@@ -36,6 +37,8 @@ func _roll_dice():
 		currentIndex = newIndex
 		duration -= 0.1
 		
+	for child in faces.get_children():
+		child.hide()
+	faces.get_child(random_roll - 1).show()
 	isRolling = false
-	
-	roll_done.emit(currentIndex + 1)
+	print("dice.roll_done: " + str(random_roll))

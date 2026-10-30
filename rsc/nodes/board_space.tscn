@@ -12,6 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://dei3bdmyj3knc" path="res://rsc/assets/spaces/trap.png" id="10_4gan7"]
 [ext_resource type="Texture2D" uid="uid://bcf0t140g8sod" path="res://rsc/assets/spaces/treasure.png" id="11_07rut"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpboc"]
+atlas = ExtResource("9_mfnt7")
+region = Rect2(0, 0, 16, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_26k7k"]
 animations = [{
 "frames": [{
@@ -93,6 +97,14 @@ animations = [{
 "loop": 1,
 "name": &"treasure",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpboc")
+}],
+"loop": 1,
+"name": &"win",
+"speed": 5.0
 }]
 
 [node name="BoardSpace" type="Node2D" unique_id=144697140]
@@ -100,4 +112,4 @@ script = ExtResource("1_s4d1t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=401299965]
 sprite_frames = SubResource("SpriteFrames_26k7k")
-animation = &"empty"
+animation = &"win"

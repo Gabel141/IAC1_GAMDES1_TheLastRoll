@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://baek0x4syjouu"]
+
+[ext_resource type="Script" uid="uid://dh767vdmnla1b" path="res://rsc/scripts/main_script.gd" id="1_tui8y"]
+[ext_resource type="PackedScene" uid="uid://t51qpd7eetxf" path="res://rsc/scenes/ui.tscn" id="2_txl85"]
+[ext_resource type="PackedScene" uid="uid://cd6xicuvog7xl" path="res://rsc/scenes/tutorial_map.tscn" id="3_kc8fi"]
+[ext_resource type="PackedScene" uid="uid://b6b4uc71nlht5" path="res://rsc/nodes/player.tscn" id="5_cumdj"]
+
+[node name="Root" type="Node2D" unique_id=84001233]
+script = ExtResource("1_tui8y")
+
+[node name="Camera" type="Camera2D" parent="." unique_id=85423000]
+
+[node name="UI" parent="." unique_id=647479609 instance=ExtResource("2_txl85")]
+
+[node name="Map" parent="." unique_id=1773411277 instance=ExtResource("3_kc8fi")]
+
+[node name="SpaceCount" type="Label" parent="." unique_id=1646078757]
+offset_left = -556.0
+offset_top = -306.0
+offset_right = -516.0
+offset_bottom = -283.0
+
+[node name="Players" type="Node2D" parent="." unique_id=1924121899]
+
+[node name="Player" parent="Players" unique_id=451365022 instance=ExtResource("5_cumdj")]
+
+[connection signal="endTurn" from="UI" to="." method="_end_turn"]
+[connection signal="movementDiceRolled" from="UI" to="." method="_on_dice_roll_done"]
